@@ -44,7 +44,7 @@
 > Dots automatically track which section is visible and fill proportionally as you scroll.
 
 ### Live Customization
-<img src="assets/demo_ajustes.webp" alt="Customization demo" width="600">
+<img src="assets/demo_ajustes.png" alt="Customization demo" width="600">
 
 > Change colors, sizes, position and behavior — all in real-time. Try it out in the [Live Demo](https://lucatorl.github.io/dotscroll/docs/).
 
@@ -271,7 +271,7 @@ dotscroll/
 │
 ├── assets/                  ← README assets
 │   ├── demo_basica.webp
-│   └── demo_ajustes.webp
+│   └── demo_ajustes.png
 │
 ├── package.json             ← npm package config
 ├── build.js                 ← Build script
