@@ -1,0 +1,38 @@
+{
+  "name": "dotscroll",
+  "version": "1.0.0",
+  "description": "A tiny, zero-dependency scroll progress navigation. Drop it into any website and get beautiful dot indicators.",
+  "main": "dist/dotscroll.min.js",
+  "module": "dist/dotscroll.esm.js",
+  "style": "dist/dotscroll.min.css",
+  "unpkg": "dist/dotscroll.min.js",
+  "jsdelivr": "dist/dotscroll.min.js",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && echo Build complete!"
+  },
+  "keywords": [
+    "scroll",
+    "navigation",
+    "dots",
+    "progress",
+    "scrollbar",
+    "smooth-scroll",
+    "scroll-indicator",
+    "vanilla-js",
+    "zero-dependency"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

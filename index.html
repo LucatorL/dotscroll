@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DotScroll — Scroll Progress Navigation</title>
+  <meta name="description" content="A tiny, zero-dependency scroll progress navigation library.">
+  <link rel="stylesheet" href="dotscroll.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+  <!-- ═══ SECTION 1: HERO ═══ -->
+  <section class="demo-section" data-dotscroll data-dotscroll-label="Home">
+    <span class="section-number">01</span>
+    <div class="section-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        v1.0 — Open Source
+      </div>
+      <h1 class="hero-title">Dot<span>Scroll</span></h1>
+      <p class="section-desc">
+        A tiny, zero-dependency scroll progress navigation. Drop it into any
+        website and get beautiful dot indicators that track where you are on the page.
+      </p>
+      <div class="hero-links">
+        <a href="https://github.com" class="hero-link hero-link--primary">★ GitHub</a>
+        <a href="#install" class="hero-link hero-link--secondary" onclick="dotscroll.scrollTo(1); return false;">Quick Start →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 2: INSTALLATION ═══ -->
+  <section class="demo-section" id="install" data-dotscroll data-dotscroll-label="Installation">
+    <span class="section-number">02</span>
+    <div class="section-content">
+      <p class="section-label">Installation</p>
+      <h2 class="section-title">Two files. That's it.</h2>
+      <p class="section-desc">
+        No npm required. Just link the CSS and JS files, and add the
+        <code>data-dotscroll</code> attribute to your sections.
+      </p>
+      <div class="demo-code">
+        <code>
+          <span class="comment">&lt;!-- 1. Include CSS --&gt;</span><br>
+          <span class="tag">&lt;link</span> <span class="attr">rel=</span><span class="str">"stylesheet"</span> <span class="attr">href=</span><span class="str">"dotscroll.css"</span><span class="tag">&gt;</span><br><br>
+          <span class="comment">&lt;!-- 2. Add attributes to your sections --&gt;</span><br>
+          <span class="tag">&lt;section</span> <span class="attr">data-dotscroll</span><span class="tag">&gt;</span>Section 1<span class="tag">&lt;/section&gt;</span><br>
+          <span class="tag">&lt;section</span> <span class="attr">data-dotscroll</span><span class="tag">&gt;</span>Section 2<span class="tag">&lt;/section&gt;</span><br><br>
+          <span class="comment">&lt;!-- 3. Include JS (auto-initializes) --&gt;</span><br>
+          <span class="tag">&lt;script</span> <span class="attr">src=</span><span class="str">"dotscroll.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+        </code>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 3: CONFIGURATION ═══ -->
+  <section class="demo-section" data-dotscroll data-dotscroll-label="Configuration">
+    <span class="section-number">03</span>
+    <div class="section-content">
+      <p class="section-label">Zero JS Setup</p>
+      <h2 class="section-title">Configure via HTML.</h2>
+      <p class="section-desc">
+        Change options directly on the script tag using data attributes.
+      </p>
+      <div class="demo-code">
+        <code>
+          <span class="comment">&lt;!-- Disable smooth scroll --&gt;</span><br>
+          <span class="tag">&lt;script</span> <span class="attr">src=</span><span class="str">"dotscroll.js"</span><br>
+          &nbsp;&nbsp;<span class="attr">data-smooth=</span><span class="str">"false"</span><span class="tag">&gt;&lt;/script&gt;</span><br><br>
+          <span class="comment">&lt;!-- Position on the left --&gt;</span><br>
+          <span class="tag">&lt;script</span> <span class="attr">src=</span><span class="str">"dotscroll.js"</span><br>
+          &nbsp;&nbsp;<span class="attr">data-position=</span><span class="str">"left"</span><br>
+          &nbsp;&nbsp;<span class="attr">data-offset=</span><span class="str">"32"</span><span class="tag">&gt;&lt;/script&gt;</span>
+        </code>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 4: API ═══ -->
+  <section class="demo-section" data-dotscroll data-dotscroll-label="API">
+    <span class="section-number">04</span>
+    <div class="section-content">
+      <p class="section-label">JavaScript API</p>
+      <h2 class="section-title">Full control.</h2>
+      <p class="section-desc">
+        Need more power? Initialize manually and use the full API.
+      </p>
+      <div class="demo-code">
+        <code>
+          <span class="comment">// Manual init with options</span><br>
+          <span class="tag">const</span> ds = DotScroll.init({<br>
+          &nbsp;&nbsp;smooth: <span class="str">true</span>,<br>
+          &nbsp;&nbsp;ease: <span class="str">0.06</span>,<br>
+          &nbsp;&nbsp;onChange: <span class="tag">(i, el)</span> =&gt; {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="str">'Section'</span>, i);<br>
+          &nbsp;&nbsp;}<br>
+          });<br><br>
+          <span class="comment">// Control programmatically</span><br>
+          ds.scrollTo(<span class="str">2</span>);<br>
+          ds.setSmooth(<span class="str">false</span>);
+        </code>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 5: CTA ═══ -->
+  <section class="demo-section" data-dotscroll data-dotscroll-label="Get Started">
+    <span class="section-number">05</span>
+    <div class="section-content">
+      <h2 class="hero-title">Start scrolling.</h2>
+      <p class="section-desc">
+        Check out the settings panel on the left to add test sections and experiment with the parameters.
+      </p>
+      <div class="hero-links">
+        <a href="https://github.com" class="hero-link hero-link--primary">Download on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Container for dynamically added playground sections -->
+  <div id="sections-container"></div>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTROL PANEL TOGGLE & UI
+       ═══════════════════════════════════════════ -->
+  <button class="panel-toggle" id="panel-toggle" aria-label="Toggle control panel">⚙️</button>
+
+  <div class="control-panel" id="control-panel">
+    <div class="panel-scroll" data-dotscroll-ignore>
+      <div class="panel-header">
+        <div class="panel-header-icon">⚙️</div>
+        Ajustes DotScroll
+      </div>
+
+      <!-- ADD SECTIONS -->
+      <div class="panel-section">
+        <div class="panel-section-title" style="display:flex;align-items:center;">
+          Secciones Generadas <span class="section-height-badge" id="section-count" style="position:static; margin-left:auto;">0</span>
+        </div>
+        <div class="add-section-row">
+          <input type="color" id="bg-color-input" value="#3a0ca3" style="width: 38px; height: 38px; padding: 0; border: none; border-radius: 8px; background: transparent; cursor: pointer;" title="Color de fondo">
+          <input type="text" class="height-input" id="height-input" placeholder="Altura (ej: 100vh)" value="100vh">
+          <button class="btn btn-primary" id="btn-add" title="Añadir sección">+ Add</button>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <button class="btn btn-ghost btn-full" id="btn-add-5">+ Añadir 5</button>
+          <button class="btn btn-ghost btn-full" id="btn-add-tall">+ Larga (300vh)</button>
+        </div>
+        <div style="margin-top:8px;">
+          <button class="btn btn-danger btn-full" id="btn-clear">🗑 Borrar Generadas</button>
+        </div>
+      </div>
+
+      <!-- BEHAVIOR -->
+      <div class="panel-section">
+        <div class="panel-section-title">Animaciones y Comportamiento</div>
+        <div class="toggle-row">
+          <span class="toggle-label" title="Activa o desactiva la animación suave y fluida al bajar por la web">Smooth Scroll</span>
+          <button class="toggle active" id="toggle-smooth" aria-label="Toggle smooth scroll"></button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label" title="Contraste Inteligente (Modo Invertido): Los dots se adaptarán a cualquier fondo oscuro o luminoso automáticamente.">Contraste Automático</span>
+          <button class="toggle" id="toggle-invert" aria-label="Toggle inverted colors"></button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label" title="Inyecta variables CSS dinámicas para apartar mágicamente el contenido web de los controles.">Empujar Web (Safe Area)</span>
+          <button class="toggle" id="toggle-pushbody" aria-label="Toggle push body"></button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label" title="Posición de los puntitos en la pantalla">Posición</span>
+          <div class="segmented" id="seg-position">
+            <button data-val="left">Left</button>
+            <button data-val="right" class="active">Right</button>
+          </div>
+        </div>
+        <div class="slider-row" title="Punto de Activación: Define cuánto de la sección de abajo tiene que aparecer antes de que el dot cambie. Cambiará el momento en el que se ilumina la bolita.">
+          <div class="slider-header">
+            <span class="slider-label">Punto de Activación</span>
+            <span class="slider-value" id="val-trigger">0.30</span>
+          </div>
+          <input type="range" id="slider-trigger" min="0.1" max="0.5" step="0.05" value="0.3">
+        </div>
+        <div class="slider-row" title="Fricción del scroll: Un valor más bajo hará que parezca más suave y flote un poco más.">
+          <div class="slider-header">
+            <span class="slider-label">Fricción (Suavidad)</span>
+            <span class="slider-value" id="val-ease">0.075</span>
+          </div>
+          <input type="range" id="slider-ease" min="0.03" max="0.15" step="0.005" value="0.075">
+        </div>
+      </div>
+
+      <!-- APPEARANCE -->
+      <div class="panel-section">
+        <div class="panel-section-title">Apariencia y Colores</div>
+        <div class="toggle-row">
+          <span class="toggle-label" title="Si lo desactivas, elimina la píldora translúcida de fondo y deja solo los puntitos flotando.">Píldora Translúcida (Fondo)</span>
+          <button class="toggle active" id="toggle-compact" aria-label="Toggle compact mode"></button>
+        </div>
+        <div id="appearance-controls" style="transition: opacity 0.3s;">
+          <div class="color-presets" id="color-presets">
+            <button class="color-preset active" data-color="#ffffff" style="background:#ffffff;" title="Blanco"></button>
+            <button class="color-preset" data-color="#4ade80" style="background:#4ade80;" title="Verde"></button>
+            <button class="color-preset" data-color="#22d3ee" style="background:#22d3ee;" title="Cyan"></button>
+            <button class="color-preset" data-color="#818cf8" style="background:#818cf8;" title="Índigo"></button>
+            <button class="color-preset" data-color="#f472b6" style="background:#f472b6;" title="Rosa"></button>
+            <button class="color-preset" data-color="#facc15" style="background:#facc15;" title="Amarillo"></button>
+          </div>
+          <div class="slider-row" style="margin-top:14px;">
+            <div class="slider-header">
+              <span class="slider-label">Grosor de los dots</span>
+              <span class="slider-value" id="val-dotwidth">6px</span>
+            </div>
+            <input type="range" id="slider-dotwidth" min="3" max="12" step="1" value="6">
+          </div>
+          <div class="slider-row">
+            <div class="slider-header">
+              <span class="slider-label">Altura (Dot Activo)</span>
+              <span class="slider-value" id="val-dotheight">30px</span>
+            </div>
+            <input type="range" id="slider-dotheight" min="15" max="60" step="5" value="30">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DotScroll library -->
+  <script src="dotscroll.js" data-auto-init="false"></script>
+
+  <script>
+    /* ═══════════════════════════════════════
+       PLAYGROUND CONTROLLER
+       ═══════════════════════════════════════ */
+
+    // We can generate varying darkness versions of the custom selected color
+    function hexToDarkerHex(hex, percent) {
+      // Very simple darken function for the background gradient
+      let r = parseInt(hex.substring(1,3), 16);
+      let g = parseInt(hex.substring(3,5), 16);
+      let b = parseInt(hex.substring(5,7), 16);
+      
+      r = parseInt(r * (100 - percent) / 100);
+      g = parseInt(g * (100 - percent) / 100);
+      b = parseInt(b * (100 - percent) / 100);
+
+      r = r < 255 ? r : 255;  
+      g = g < 255 ? g : 255;  
+      b = b < 255 ? b : 255;  
+
+      let RR = r.toString(16).length==1 ? "0"+r.toString(16) : r.toString(16);
+      let GG = g.toString(16).length==1 ? "0"+g.toString(16) : g.toString(16);
+      let BB = b.toString(16).length==1 ? "0"+b.toString(16) : b.toString(16);
+
+      return "#"+RR+GG+BB;
+    }
+
+    let sectionId = 0;
+
+    // State
+    const state = {
+      smooth: true,
+      position: 'right',
+      triggerOffset: 0.3,
+      ease: 0.075,
+      invert: false,
+      compact: false,
+      pushBody: false,
+      fillColor: '#ffffff',
+      dotWidth: 6,
+      dotActiveHeight: 30,
+    };
+
+    const container = document.getElementById('sections-container');
+
+    // ── Create a section ──
+    function createSection(height = '100vh', forceColor = null) {
+      const idx = sectionId++;
+      
+      // Get the color selected in the panel UI
+      const baseColor = forceColor || document.getElementById('bg-color-input').value || '#3a0ca3';
+      const c1 = hexToDarkerHex(baseColor, 10);
+      const c2 = hexToDarkerHex(baseColor, 50);
+
+      const displayNum = document.querySelectorAll('.demo-section').length + 1; // Count all
+
+      const sec = document.createElement('section');
+      sec.className = 'demo-section is-generated';
+      sec.setAttribute('data-dotscroll', '');
+      sec.setAttribute('data-dotscroll-label', `Prueba ${displayNum}`);
+      sec.id = `sec-gen-${idx}`;
+      sec.style.background = `linear-gradient(135deg, ${c1} 0%, ${c2} 100%)`;
+      sec.style.minHeight = height;
+
+      sec.innerHTML = `
+        <button class="section-delete" onclick="window.removeSection('${sec.id}')" title="Borrar sección">✕</button>
+        <span class="section-number">${String(displayNum).padStart(2, '0')}</span>
+        <div class="section-content">
+          <p class="section-label">Demo Generada</p>
+          <h2 class="section-title">Sección ${displayNum}</h2>
+          <p class="section-desc">Altura: ${height}<br>Color: ${baseColor}</p>
+        </div>
+        <span class="section-height-badge">${height}</span>
+      `;
+
+      container.appendChild(sec);
+      reinit();
+    }
+
+    // ── Remove a section ──
+    window.removeSection = function(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.minHeight = '0';
+        el.style.padding = '0';
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.remove();
+          reinit();
+        }, 300);
+      }
+    };
+
+    // ── Remove all dynamic sections ──
+    function clearSections() {
+      container.innerHTML = '';
+      sectionId = 0;
+      reinit();
+    }
+
+    // ── Reinitialize DotScroll ──
+    function reinit() {
+      // Clean up old instance using the global exposed on window if needed
+      if (window.dotscroll) {
+        window.dotscroll.destroy();
+      }
+
+      // Apply CSS custom properties
+      const root = document.documentElement;
+      root.style.setProperty('--dotscroll-fill-color', state.fillColor);
+      root.style.setProperty('--dotscroll-dot-width', state.dotWidth + 'px');
+      root.style.setProperty('--dotscroll-dot-active-height', state.dotActiveHeight + 'px');
+
+      // Update UI counts
+      const generatedCount = container.querySelectorAll('.is-generated').length;
+      document.getElementById('section-count').textContent = generatedCount;
+
+      // Position Panel Logic
+      if (state.position === 'left') {
+        document.body.classList.add('panel-right');
+      } else {
+        document.body.classList.remove('panel-right');
+      }
+
+      // Handle disabled appearance controls when inverted
+      const appControls = document.getElementById('appearance-controls');
+      if (state.invert) {
+        appControls.style.opacity = '0.3';
+        appControls.style.pointerEvents = 'none';
+      } else {
+        appControls.style.opacity = '1';
+        appControls.style.pointerEvents = 'all';
+      }
+
+      // Init new
+      window.dotscroll = DotScroll.init({
+        smooth: state.smooth,
+        position: state.position,
+        triggerOffset: state.triggerOffset,
+        ease: state.ease,
+        invert: state.invert,
+        compact: state.compact,
+        pushBody: state.pushBody,
+      });
+    }
+
+    /* ═══ PANEL CONTROLS ═══ */
+
+    // Toggle panel
+    const panelToggle = document.getElementById('panel-toggle');
+    const panel = document.getElementById('control-panel');
+    panelToggle.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      panelToggle.classList.toggle('active');
+    });
+
+    // Add section buttons
+    document.getElementById('btn-add').addEventListener('click', () => {
+      const h = document.getElementById('height-input').value.trim() || '100vh';
+      createSection(h);
+    });
+
+    document.getElementById('height-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') document.getElementById('btn-add').click();
+    });
+
+    document.getElementById('btn-add-5').addEventListener('click', () => {
+      const colors = ['#2b2d42', '#3a0ca3', '#560bad', '#1d3557', '#023047'];
+      for (let i = 0; i < 5; i++) {
+        createSection('100vh', colors[i % colors.length]);
+      }
+    });
+
+    document.getElementById('btn-add-tall').addEventListener('click', () => {
+      createSection('300vh');
+    });
+
+    document.getElementById('btn-clear').addEventListener('click', clearSections);
+
+    // Toggle invert
+    document.getElementById('toggle-invert').addEventListener('click', function () {
+      this.classList.toggle('active');
+      state.invert = this.classList.contains('active');
+      reinit();
+    });
+
+    // Toggle pushbody
+    document.getElementById('toggle-pushbody').addEventListener('click', function () {
+      this.classList.toggle('active');
+      state.pushBody = this.classList.contains('active');
+      reinit();
+    });
+
+    // Toggle compact mode
+    document.getElementById('toggle-compact').addEventListener('click', function () {
+      this.classList.toggle('active');
+      state.compact = !this.classList.contains('active'); // active = show background, !active = compact
+      reinit();
+    });
+
+    // Smooth toggle
+    document.getElementById('toggle-smooth').addEventListener('click', function () {
+      this.classList.toggle('active');
+      state.smooth = this.classList.contains('active');
+      reinit();
+    });
+
+    // Position segmented
+    document.getElementById('seg-position').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-val]');
+      if (!btn) return;
+      document.querySelectorAll('#seg-position button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.position = btn.dataset.val;
+      reinit();
+    });
+
+    // Trigger offset slider
+    document.getElementById('slider-trigger').addEventListener('input', function () {
+      state.triggerOffset = parseFloat(this.value);
+      document.getElementById('val-trigger').textContent = state.triggerOffset.toFixed(2);
+      reinit();
+    });
+
+    // Ease slider
+    document.getElementById('slider-ease').addEventListener('input', function () {
+      state.ease = parseFloat(this.value);
+      document.getElementById('val-ease').textContent = state.ease.toFixed(3);
+      reinit();
+    });
+
+    // Color presets
+    document.getElementById('color-presets').addEventListener('click', (e) => {
+      const btn = e.target.closest('.color-preset');
+      if (!btn) return;
+      document.querySelectorAll('.color-preset').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.fillColor = btn.dataset.color;
+      document.documentElement.style.setProperty('--dotscroll-fill-color', state.fillColor);
+      document.documentElement.style.setProperty('--dotscroll-dot-hover', state.fillColor + '55');
+    });
+
+    // Dot width slider
+    document.getElementById('slider-dotwidth').addEventListener('input', function () {
+      state.dotWidth = parseInt(this.value);
+      document.getElementById('val-dotwidth').textContent = state.dotWidth + 'px';
+      document.documentElement.style.setProperty('--dotscroll-dot-width', state.dotWidth + 'px');
+    });
+
+    // Dot active height slider
+    document.getElementById('slider-dotheight').addEventListener('input', function () {
+      state.dotActiveHeight = parseInt(this.value);
+      document.getElementById('val-dotheight').textContent = state.dotActiveHeight + 'px';
+      document.documentElement.style.setProperty('--dotscroll-dot-active-height', state.dotActiveHeight + 'px');
+    });
+
+    /* ═══ INITIALIZATION ═══ */
+    // Initialize with marketing sections
+    reinit();
+
+  </script>
+</body>
+</html>
