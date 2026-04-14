@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="docs/videos/dotscroll_basic_demo.webp" alt="DotScroll Demo" width="700">
+  <a href="https://lucatorl.github.io/dotscroll/docs/">
+    <img src="assets/demo_basica.webp" alt="DotScroll Demo" width="700">
+  </a>
 </p>
 
 <h1 align="center">DotScroll</h1>
@@ -10,12 +12,10 @@
 </p>
 
 <p align="center">
+  <a href="https://lucatorl.github.io/dotscroll/docs/"><strong>▶ Live Demo</strong></a> ·
   <a href="#-quick-start">Quick Start</a> ·
-  <a href="#-video-demos">Video Demos</a> ·
   <a href="#-customization">Customization</a> ·
-  <a href="#%EF%B8%8F-javascript-api">API</a> ·
-  <a href="docs/index.html">Full Docs</a> ·
-  <a href="docs/playground/index.html">Live Playground</a>
+  <a href="#%EF%B8%8F-javascript-api">API</a>
 </p>
 
 ---
@@ -39,24 +39,14 @@
 ## 🎬 Video Demos
 
 ### Basic Scroll Tracking
-<img src="docs/videos/dotscroll_basic_demo.webp" alt="Basic scroll tracking demo" width="600">
+<img src="assets/demo_basica.webp" alt="Basic scroll tracking demo" width="600">
 
 > Dots automatically track which section is visible and fill proportionally as you scroll.
 
-### Smooth Scroll Engine
-<img src="docs/videos/dotscroll_smooth_scroll.webp" alt="Smooth scroll toggle demo" width="600">
-
-> Built-in smooth scroll engine. Toggle on/off in real-time.
-
-### Overflow Counters (+N)
-<img src="docs/videos/dotscroll_many_sections.webp" alt="Many sections overflow demo" width="600">
-
-> When there are too many sections, animated +N counters show how many dots are hidden.
-
 ### Live Customization
-<img src="docs/videos/dotscroll_customization.webp" alt="Customization demo" width="600">
+<img src="assets/demo_ajustes.webp" alt="Customization demo" width="600">
 
-> Change colors, sizes, position and behavior — all in real-time.
+> Change colors, sizes, position and behavior — all in real-time. Try it out in the [Live Demo](https://lucatorl.github.io/dotscroll/docs/).
 
 ---
 
@@ -263,28 +253,28 @@ For advanced usage, initialize manually:
 
 ## 📁 Project Structure
 
-```
+```text
 dotscroll/
 ├── dist/                    ← Distribution files (use these)
-│   ├── dotscroll.js         ← Full version
-│   ├── dotscroll.min.js     ← Minified version
-│   ├── dotscroll.css        ← Full CSS
-│   └── dotscroll.min.css    ← Minified CSS
+│   ├── dotscroll.js         
+│   ├── dotscroll.min.js     
+│   ├── dotscroll.css        
+│   └── dotscroll.min.css    
 │
 ├── src/                     ← Source code
-│   ├── dotscroll.js         ← JS source (UMD + ESM compatible)
-│   └── dotscroll.css        ← CSS source
+│   ├── dotscroll.js         
+│   └── dotscroll.css        
 │
-├── docs/                    ← Documentation & demos
-│   ├── index.html           ← Full docs page with videos
-│   ├── videos/              ← Demo video recordings
-│   └── playground/          ← Interactive playground
-│       ├── index.html
-│       └── demo.css
+├── docs/                    ← Live Demo directory (GitHub Pages)
+│   ├── index.html           
+│   └── demo.css
+│
+├── assets/                  ← README assets
+│   ├── demo_basica.webp
+│   └── demo_ajustes.webp
 │
 ├── package.json             ← npm package config
-├── build.js                 ← Build script (requires Node.js)
-├── LICENSE                  ← MIT license
+├── build.js                 ← Build script
 └── README.md
 ```
 
@@ -298,19 +288,6 @@ dotscroll/
 4. **Active** — Binary search (O(log n)) finds the active section efficiently
 5. **Counters** — When dots overflow the viewport, animated `+N` counters show how many are hidden
 6. **Smooth** — Optional smooth scrolling intercepts wheel/touch/keyboard events
-
----
-
-## 🏗️ Building (Optional)
-
-If you have Node.js installed and want to generate minified bundles:
-
-```bash
-npm install        # Install esbuild
-npm run build      # Generate dist/ files
-```
-
-This is **optional** — the files in `dist/` are ready to use as-is.
 
 ---
 
