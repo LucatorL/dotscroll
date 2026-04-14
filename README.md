@@ -38,15 +38,20 @@
 
 ## 🎬 Video Demos
 
-### Basic Scroll Tracking
+### 1. Basic Scroll Tracking
 <img src="assets/demo_basica.webp" alt="Basic scroll tracking demo" width="600">
 
-> Dots automatically track which section is visible and fill proportionally as you scroll.
+> Dots automatically track which section is visible and fill proportionally as you scroll down the page.
 
-### Live Customization
+### 2. Large Scale (Overflow Counters)
+<img src="assets/demo_multiples.png" alt="Many sections overflow demo" width="600">
+
+> When there are too many sections, animated `+N` counters seamlessly indicate how many dots are hidden outside the viewport.
+
+### 3. Live Customization
 <img src="assets/demo_ajustes.png" alt="Customization demo" width="600">
 
-> Change colors, sizes, position and behavior — all in real-time. Try it out in the [Live Demo](https://lucatorl.github.io/dotscroll/docs/).
+> Change colors, sizes, position and behavior — all in real-time. Try it out yourself in the [Live Demo](https://lucatorl.github.io/dotscroll/docs/).
 
 ---
 
@@ -271,6 +276,7 @@ dotscroll/
 │
 ├── assets/                  ← README assets
 │   ├── demo_basica.webp
+│   ├── demo_multiples.png
 │   └── demo_ajustes.png
 │
 ├── package.json             ← npm package config
